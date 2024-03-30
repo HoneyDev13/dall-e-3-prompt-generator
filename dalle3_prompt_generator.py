@@ -1,6 +1,3 @@
-import random
-# dalle3_prompt_generator.py
-
 def generate_dalle3_prompts(user_text):
     base_prompts = [
         "Generate an AI image with DALL-E 3 depicting a hyperrealistic scene of an abundance of assorted fruits arranged in a vibrant display. The scene should be rich in color and texture, with a variety of fruits such as apples, oranges, bananas, grapes, and berries filling the frame. Ensure each fruit is rendered with meticulous detail, capturing the luscious textures and vibrant colors.",
@@ -12,6 +9,7 @@ def generate_dalle3_prompts(user_text):
     # Randomly select one of the base prompts
     selected_prompt = random.choice(base_prompts)
     
+    # Ensure that the user's text is only inserted once
     prompt = selected_prompt.format(user_text)
     return prompt
 
