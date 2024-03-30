@@ -14,15 +14,20 @@ def load_prompts_from_config(config_file):
                 print(f"Error: The configuration file {config_file} is not valid JSON.")
     return None
 
+def save_prompt_to_file(prompt, filename):
+    try:
+        with open(filename, 'w') as file:
+            file.write(prompt)
+        print(f"Prompt saved to {filename}")
+    except Exception as e:
+        print(f"Error: Failed to save prompt to {filename}. Reason: {str(e)}")
+
 def generate_dalle3_prompts(user_text, config_file='prompts_config.json'):
-    # Try to load prompts from the configuration file
     prompts = load_prompts_from_config(config_file)
     
     if prompts:
-        # If prompts are found in the configuration file, use them
         selected_prompt = random.choice(prompts)
     else:
-        # If no prompts are found in the configuration file, use the base prompts
         base_prompts = [
             "Generate an AI image with DALL-E 3 depicting a hyperrealistic scene of an abundance of assorted fruits arranged in a vibrant display. The scene should be rich in color and texture, with a variety of fruits such as apples, oranges, bananas, grapes, and berries filling the frame. Ensure each fruit is rendered with meticulous detail, capturing the luscious textures and vibrant colors.",
             "Overlaying this bountiful arrangement, introduce glowing metallic-textured blue letters spelling out the word '{}'. Ensure the text appears to hover gracefully above the fruits, emitting a soft, ethereal glow that enhances the natural beauty of the scene. Pay close attention to the interplay of light and shadow, as well as the intricate details of each fruit, to achieve a visually stunning and photorealistic rendering.",
@@ -41,6 +46,12 @@ def main():
     
     print("\nGenerated Prompt:")
     print(prompt)
+    
+    # Option to save generated prompt to a file
+    save_to_file = input("Do you want to save the generated prompt to a file? (yes/no): ").strip().lower()
+    if save_to_file == 'yes':
+        filename = input("Please enter the filename to save the prompt: ")
+        save_prompt_to_file(prompt, filename)
 
 if __name__ == "__main__":
     main()
