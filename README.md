@@ -4,20 +4,22 @@ Juneberry is a command-line tool that generates prompts for an AI image generati
 
 ## Features
 
-1. **Prompt Generation**: The tool randomly selects a prompt from a predefined list or a custom configuration file. It then inserts the user's text into the selected prompt.
-
-2. **Custom Prompt Configuration**: Users can add custom prompts to a configuration file, which the tool will use to generate prompts.
-
-3. **Prompt Saving to File**: After generating a prompt, users can choose to save it to a file.
-
-4. **Prompt Copy to Clipboard**: The generated prompt is automatically copied to the clipboard for easy pasting.
-
-5. **Improved Error Handling**: The tool now includes improved error handling to provide more informative feedback to users. This includes handling of invalid JSON configuration files, file writing errors, and other potential issues.
+- **Prompt Generation:** The tool randomly selects a prompt from a predefined list or a custom configuration file. It then inserts the user's text into the selected prompt.
+  
+- **Custom Prompt Configuration:** Users can add custom prompts to a configuration file, which the tool will use to generate prompts.
+  
+- **Prompt Saving to File:** After generating a prompt, users can choose to save it to a file.
+  
+- **Prompt Copy to Clipboard:** The generated prompt is automatically copied to the clipboard for easy pasting.
+  
+- **Improved Error Handling:** The tool now includes improved error handling to provide more informative feedback to users. This includes handling of invalid JSON configuration files, file writing errors, and other potential issues.
 
 ## Usage
 
 1. Run the `dalle3_prompt_generator.py` script.
+   
 2. Ensure you have a `prompts_config.json` file in the same directory as the script.
+   
 3. The `prompts_config.json` file should have the following structure:
 
 ```json
