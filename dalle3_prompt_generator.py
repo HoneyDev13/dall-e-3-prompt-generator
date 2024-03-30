@@ -1,6 +1,7 @@
 import random
 import json
 import os
+import pyperclip
 # dalle3_prompt_generator.py
 
 def load_prompts_from_config(config_file):
@@ -46,6 +47,10 @@ def main():
     
     print("\nGenerated Prompt:")
     print(prompt)
+    
+    # Copy the prompt to the clipboard
+    pyperclip.copy(prompt)
+    print("Prompt copied to clipboard.")
     
     # Option to save generated prompt to a file
     save_to_file = input("Do you want to save the generated prompt to a file? (yes/no): ").strip().lower()
