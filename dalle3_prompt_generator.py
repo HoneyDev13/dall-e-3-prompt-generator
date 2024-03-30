@@ -1,3 +1,4 @@
+import random
 # dalle3_prompt_generator.py
 
 def generate_dalle3_prompts(user_text):
