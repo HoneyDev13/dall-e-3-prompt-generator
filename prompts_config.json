@@ -1,0 +1,8 @@
+{
+    "prompts": [
+        "Your first prompt here",
+        "Your second prompt here",
+        "Your third prompt here",
+        // ... add as many prompts as you want
+    ]
+}
