@@ -14,48 +14,42 @@ Juneberry is a command-line tool that generates prompts for an AI image generati
   
 - **Improved Error Handling:** The tool now includes improved error handling to provide more informative feedback to users. This includes handling of invalid JSON configuration files, file writing errors, and other potential issues.
 
+## Requirements
+
+Python is required for running the script. Additionally, the following dependencies are needed:
+
+- `pyperclip`: Required for copying prompts to the clipboard.
+  
+The `prompts_config.json` file is also required to be filled out with prompts. This file is already pre-filled by the developer.
+
 ## Usage
 
-1. Run the `dalle3_prompt_generator.py` script.
-   
-2. Ensure you have a `prompts_config.json` file in the same directory as the script.
-   
-3. The `prompts_config.json` file should have the following structure:
+1. **Enter the text:** Input the text you want to appear on the image when prompted.
 
-```json
-{
-  "prompts": [
-    "Generate an AI image with DALL-E 3 depicting a hyperrealistic scene of an abundance of assorted fruits arranged in a vibrant display. The scene should be rich in color and texture, with a variety of fruits such as apples, oranges, bananas, grapes, and berries filling the frame. Ensure each fruit is rendered with meticulous detail, capturing the luscious textures and vibrant colors.",
-    "Overlaying this bountiful arrangement, introduce glowing metallic-textured blue letters spelling out the word '{}'. Ensure the text appears to hover gracefully above the fruits, emitting a soft, ethereal glow that enhances the natural beauty of the scene. Pay close attention to the interplay of light and shadow, as well as the intricate details of each fruit, to achieve a visually stunning and photorealistic rendering.",
-    "Generate an AI image with DALL-E 3 depicting a hyperrealistic scene featuring an arrangement of pineapples, strawberries, and a bowl of milk set against a clean and inviting background. Each pineapple should be rendered with meticulous detail, capturing the texture of its rough, spiky skin and vibrant hues of yellow and green. The strawberries should appear plump and juicy, with vibrant red hues and delicate seeds. The bowl of milk should be depicted with a smooth and creamy texture, nestled among the fruits. Overlaying this arrangement, introduce glowing metallic-textured blue letters spelling out the word '{}'. Ensure the text appears to float elegantly above the fruits and milk, emitting a soft, ethereal glow that enhances the natural beauty of the scene. Pay close attention to the interplay of light and shadow, as well as the intricate details of each element, to achieve a visually stunning and photorealistic rendering."
-  ]
-}
-Enter the text you want to appear on the image when prompted.
+2. **Review the prompt:** Check the generated prompt.
 
-Review the generated prompt.
+3. **Save or copy:** Choose to save the prompt to a file or copy it to the clipboard.
 
-Choose to save the prompt to a file or copy it to the clipboard.
+## Installation
 
-If you have added custom prompts to the configuration file, you can now generate prompts with those templates. If no custom prompts are available, the tool will use the base prompts mentioned in the source code.
+To use Juneberry, follow these steps:
 
-Installation
-To use the Juneberry tool, follow these steps:
+- **Clone repository:** Clone the repository to your local machine.
+  
+- **Install dependencies:** Install the `pyperclip` module by running `pip install pyperclip`.
+  
+- **Run script:** Execute the `dalle3_prompt_generator.py` script using Python.
 
-Clone the repository to your local machine.
+## Contributing
 
-Ensure you have Python installed on your system.
+Contributions are welcome! If you have suggestions, bug reports, or feature requests, please open an issue or submit a pull request on the GitHub repository.
 
-Install the pyperclip module by running pip install pyperclip.
+## License
 
-Run the dalle3_prompt_generator.py script using Python.
-
-Contributing
-Contributions to the Juneberry tool are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request on the GitHub repository.
-
-License
 This project is licensed under the Creative Commons Zero v1.0 Universal.
 
-Star the Repository
-If you find the Juneberry tool useful, please consider starring the repository on GitHub. This will help me to track the interest and gather feedback.
+## Star the Repository
 
-Thank you for your support!
+If you find Juneberry useful, please consider starring the repository on GitHub. Your support is appreciated!
+
+Thank you!
