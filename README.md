@@ -12,6 +12,8 @@ Juneberry is a command-line tool that generates prompts for an AI image generati
   
 - **Prompt Copy to Clipboard:** The generated prompt is automatically copied to the clipboard for easy pasting.
   
+- **Prompt Rating:** After a prompt is generated, users are asked to rate the prompt on a scale of 1-5. This feedback can be used to improve the prompt generation process.
+  
 - **Improved Error Handling:** The tool now includes improved error handling to provide more informative feedback to users. This includes handling of invalid JSON configuration files, file writing errors, and other potential issues.
 
 ## Requirements
@@ -29,6 +31,8 @@ The `prompts_config.json` file is also required to be filled out with prompts. T
 2. **Review the prompt:** Check the generated prompt.
 
 3. **Save or copy:** Choose to save the prompt to a file or copy it to the clipboard.
+
+4. **Rate the prompt:** Provide a rating for the generated prompt on a scale of 1-5.
 
 ## Installation
 
