@@ -2,7 +2,6 @@ import random
 import json
 import os
 import pyperclip
-# dalle3_prompt_generator.py
 
 def load_prompts_from_config(config_file):
     if os.path.exists(config_file):
@@ -28,12 +27,19 @@ def generate_dalle3_prompts(user_text, config_file='prompts_config.json'):
     
     if prompts:
         selected_prompt = random.choice(prompts)
-        # Ensure that the user's text is only inserted once
         prompt = selected_prompt.format(user_text)
         return prompt
     else:
         print("No prompts available in the configuration file.")
         return None
+
+def prompt_rating():
+    while True:
+        rating = input("Please rate the generated prompt on a scale of 1-5: ")
+        if rating.isdigit() and 1 <= int(rating) <= 5:
+            return int(rating)
+        else:
+            print("Invalid input. Please enter a number between 1 and 5.")
 
 def main():
     print("Welcome to the Juneberry DALL-E 3 Prompt Generator!")
@@ -53,6 +59,10 @@ def main():
         if save_to_file == 'yes':
             filename = input("Please enter the filename to save the prompt: ")
             save_prompt_to_file(prompt, filename)
+        
+        # Ask for prompt rating
+        rating = prompt_rating()
+        print(f"Thank you for your feedback! You rated the prompt a {rating} out of 5.")
     else:
         print("Unable to generate a prompt.")
 
